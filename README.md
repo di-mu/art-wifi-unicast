@@ -9,11 +9,13 @@ b) A 10-second batch conatains a specified number of packets to be transmitted;
   After each batch, power selection script is called to set the transmission power;
   Sender program repeats bathces for a specified time.
 
+
 0. Requirements
 
 a) Wireless LAN adapter (device ID: wlan0) that supports Ad-Hoc mode
 
 b) Linux and Pre-installed package: libpcap0.8-dev
+
 
 1. Change configure files
 
@@ -24,9 +26,11 @@ b) target_mac.cnf: WiFi adapter MAC address of "the other device" in the pair, r
   (check with "ifconfig" and find "HWaddr" on the other device)
   (if set as default "ff:ff:ff:ff:ff:ff", broadcast mode will be used instead of unicast)
 
+
 2. Compile
 
 Type "make" command to compile
+
 
 3. Run
 
@@ -46,6 +50,7 @@ sudo ./wz <number of packets per batch> <number of batches to transmit>
 Also, a multi-run example is available as "run.sh", editable as text file
   (before executing "run.sh" for the first time, type "chmod +x run.sh" to set it as executable)
   (type "sudo ./run.sh" to execute the multi-run script)
+
 
 4. Change power selection script (as needed)
 
